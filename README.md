@@ -153,9 +153,9 @@ const numeros = [3, 2, 4, 3, 5, 1, 3, 4, 2];
 É uma estrutura de repetição com variável de controle, usada quando se sabe exatamente o ponto de partida e de chegada, o bloco será repetido enquanto a condição for verdadeira, ou seja, para quando a condição retorne false.
 
 ```js
-  while (condicao) {
-    código aqui;
-  }
+for ([inicialização]; [condição]; [expressão final]) {
+  declaração
+}   
 ```
 
 ##### Exemplos:
@@ -357,14 +357,14 @@ const numeros = [3, 2, 4, 3, 5, 1, 3, 4, 2];
 
   ```js
   const removePrimeiro = numeros.shift();
-  console.log(removeUltimo); // retorno 3
+  console.log(removePrimeiro); // retorno 3
   ```
 
 - `unshift()` -> adiciona um ou mais elementos no início de um array e retorna o número de elementos (propriedade length) atualizado. _(MDN)_
 
   ```js
   const adicionaNoInicio = numeros.unshift(4, 1);
-  console.log(adicionaNoFinal); // retorno 11
+  console.log(adicionaNoInicio); // retorno 11
   ```
 
 - `slice()` -> retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. O Array original não é modificado. _(MDN)_
@@ -393,7 +393,7 @@ const numeros = [3, 2, 4, 3, 5, 1, 3, 4, 2];
 
   ```js
   const verificaSeExiste = numeros.includes(4);
-  console.log(localizaElemento); // true
+  console.log(verificaSeExiste); // true
   ```
 
 - `join()` -> junta todos os elementos de um array em uma string e retorna esta string. _(MDN)_
