@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:wght@200;300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  padding: 2rem;
+  color: #f3f3f399;
+}
+
+.cards {
+  background-color: #f1f1f140;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3rem;
+  box-shadow: 2px 4px 10px #57657470;
+}
+
+.posters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min-content;
+}
+
+.photography {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.subtitle {
+  font-size: 2rem;
+  padding: 1rem;
+  color: #f3f3f3a4;
+  text-align: center;
+}
+
+.infos-wrapper {
+  margin-left: 3rem;
+  flex-grow: 1;
+}
+
+.tipography {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+hr {
+  margin: 0.5rem 0;
+  opacity: 0.2;
+}
+
+.dynamic-text {
+  margin-left: 1rem;
+}
+
+.fab {
+  margin-top: 1rem;
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  filter: drop-shadow(1px 1px 1px #576574b3);
+}
