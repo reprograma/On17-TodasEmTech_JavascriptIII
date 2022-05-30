@@ -80,11 +80,11 @@ function movieCard(movie) {
     <hr />
     <p class="tipography">Ano: ${
       movie.ano
-    }<br /><span class="dynamic-text" id="year"></span></p>
+    }<br /><span class="dynamic-text"></span></p>
     <hr />
     <p class="tipography">Diretor: ${
       movie.diretor
-    } <br /><span class="dynamic-text" id="director"></span></p>
+    } <br /><span class="dynamic-text"></span></p>
     <hr />
     <p class="tipography">Gêneros: ${movie.generos.join(
       ", "
@@ -92,9 +92,9 @@ function movieCard(movie) {
     <hr />
     <p class="tipography">Elenco: ${movie.elenco.join(
       ", "
-    )}<br /><span class="dynamic-text" id="cast"></span></p>
+    )}<br /><span class="dynamic-text"></span></p>
     <hr />
-    <a id="instagram" target="_blank" href="${
+    <a target="_blank" href="${
       movie.instagram
     }"><i class="fab fa-instagram"></i></a>
   </div>
