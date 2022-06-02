@@ -10,7 +10,6 @@ Esta é a 10ª semana da turma online: Todas em Tech on17 - Front-end, nesta aul
   - Métodos de Array;
   - Objetos;
   - Objeto Date e seus métodos;
-  - JSON;
   - DOM;
 
 ## Apresentação
@@ -482,104 +481,7 @@ console.log(dataLonga); // domingo, 29 de maio de 2022
 
 ---
 
-### 8. JSON
-
-JavaScript Object Notation (JSON) é um formato baseado em texto padrão para representar dados estruturados com base na sintaxe do objeto JavaScript; _(MDN)_
-
-Mesmo que se assemelhe à sintaxe literal do objeto JavaScript, ele pode ser usado independentemente do JavaScript, e muitos ambientes de programação possuem a capacidade de ler (analisar) e gerar JSON; _(MDN)_
-
-O JSON é transmitido por uma rede como string, o que permite ser utilizado em uma variedade enorme de aplicações, o JavaScript possui o Objeto global `JSON` que possui métodos para converter para objeto quando queremos acessar os dados e para string quando queremos enviá-lo por rede;
-
-Um objeto JSON pode ser armazenado em seu próprio arquivo. _(MDN)_ (**ex.: arquivo.json**)
-
-#### 8.1. Estrutura JSON
-
-```json
-{
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
-  "active": true,
-  "members": [
-    {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-    },
-    {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
-    }
-  ]
-}
-```
-
-_(fonte: MDN)_
-
-#### 8.2. Acessando JSON
-
-```js
-console.log(superHeroes.homeTown);
-console.log(superHeroes["active"]);
-console.log(superHeroes["members"][1]["powers"][2]);
-```
-
-#### 8.3. Matrizes como JSON
-
-```json
-[
-  {
-    "name": "Molecule Man",
-    "age": 29,
-    "secretIdentity": "Dan Jukes",
-    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-  },
-  {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
-    ]
-  }
-]
-```
-
-#### 8.4. Acessando JSON (matrizes)
-
-```js
-console.log(heroes[0]["powers"][0]);
-```
-
-#### 8.5. Importante:
-
-> JSON contém apenas propriedades, sem métodos; <br> JSON só aceita aspas duplas; <br> JSON não aceita chaves/propriedades sem aspas como objetos JS, toda string precisa usar aspas;
-
----
-
-### 9. DOM
+### 8. DOM
 
 <img src='./assets/dom.png' width=700 alt='árvore de estrutura do DOM'>
 
@@ -592,7 +494,7 @@ DOM é uma sigla que significa Document Object Model. Quando a página é carreg
 
 O DOM é a representação do objeto do documento HTML e atua como uma interface de programação que permite a manipulação de sua estrutura com o JavaScript ou outras linguagens. Podemos manipular o DOM para realizar alterações na estrutura do HTML, alterar estilos, modificar conteúdos e adicionar diversos eventos.
 
-#### 9.1. Métodos de manipulação DOM
+#### 8.1. Métodos de manipulação DOM
 
 O DOM possui muitos métodos, são eles que fazem a ligação entre os nós (elementos) e os eventos.
 
@@ -609,7 +511,7 @@ Seguem alguns dos principais métodos, para a lista completa acesse a [documenta
 - `removeChild()` -> Remove um elemento filho e retorna o elemento removido;
 - `parentNode()` -> Retorna a mãe de um elemento.
 
-#### 9.2 Propriedades de manipulação DOM
+#### 8.2 Propriedades de manipulação DOM
 
 - `innerText` -> define ou obtém o conteúdo textual "renderizado" de um nó e seus descendentes;
 - `innerHTML` -> define ou obtém a sintaxe HTML contida no elemento;
@@ -621,7 +523,7 @@ Seguem alguns dos principais métodos, para a lista completa acesse a [documenta
   - `contains()` -> Retorna um valor booleano, indicando se um elemento tem o nome da classe especificada;
 - `style` -> Acrescenta/modifica um estilo ao elemento;
 
-#### 9.3 Eventos
+#### 8.3 Eventos
 
 Um eventos é um conjunto de ações que são realizadas em um determinado elemento da página web, seja ele um texto, uma imagem, ou uma div, por exemplo. A Grande maiorria dos eventos nascem na interação da usuária com a aplicação, como:
 
@@ -656,9 +558,9 @@ elemento.addEventListener('click', function (evento) {
 
 ---
 
-### 10. Para praticar na aula;
+### 9. Para praticar na aula;
 
-#### 10.1. Exercício de fixação do `if... else`
+#### 9.1. Exercício de fixação do `if... else`
 
 - Vamos criar uma lógica que verifique e retorne a classificação do IDH dos seguintes países de acordo com o a Escala de IDH do Programa das Nações Unidas para o Desenvolvimento – PNUD da ONU
 
@@ -675,7 +577,7 @@ let camaroes = 0.512;
 
 <img src='./assets/idh.jpg' width=700 alt='índice que mede IDH'>
 
-#### 10.2. Exercício de fixação do `for` e `for of`
+#### 9.2. Exercício de fixação do `for` e `for of`
 
 - Refatore o exercício anterior adicionando uma estrutura de repetição que retorne a classificação do IDH dos mesmos países, caso tenhamos recebido os dados da seguinte forma:
 
@@ -716,19 +618,19 @@ let data = [
 ];
 ```
 
-#### 10.3. Exercício de fixação do `JSON` e do `DOM`
+#### 9.3. Exercício de fixação do `DOM`
 
 - Devemos criar uma página (usando HTML e CSS) e popular os campos corretamente com os dados do objeto JSON (usando JavaScript/DOM), o objeto já está no arquivo script.js na pasta pratica com todos os detalhes sobre o exercício;
 
 ---
 
-### 11. Desafios da semana
+### 10. Desafios da semana
 
 - Devemos criar uma página (usando HTML e CSS) e popular os campos corretamente com os dados com os dados do arquivo data.json ou do objeto JSON usando JavaScript, o objeto já está no arquivo script.js na pasta desafio com todos os detalhes sobre o desafio;
 
 ---
 
-### 12. Referências
+### 11. Referências
 
 ```bash
 ¹.  Livro: Lógica de Programação e Algoritmos com JavaScript
