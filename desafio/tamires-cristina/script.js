@@ -72,55 +72,59 @@ let JSON = [
 
 const cardsContainer = document.querySelector(".cards_container");
 
-JSON.forEach((obj) => {
-  const div = document.createElement("div");
-  div.className = "card";
-  cardsContainer.appendChild(div);
+function preencherCards() {
+  JSON.forEach((obj) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    cardsContainer.appendChild(div);
 
-  const img = document.createElement("img");
-  img.setAttribute("src", obj.imagem);
-  img.className = "card_image";
-  div.appendChild(img);
+    const img = document.createElement("img");
+    img.setAttribute("src", obj.imagem);
+    img.className = "card_image";
+    div.appendChild(img);
 
-  const titulo = document.createElement("h2");
-  titulo.className = "card_h2";
-  titulo.innerText = `${obj.titulo}`;
-  div.appendChild(titulo);
-  const hr = document.createElement("hr");
-  div.appendChild(hr);
+    const titulo = document.createElement("h2");
+    titulo.className = "card_h2";
+    titulo.innerText = `${obj.titulo}`;
+    div.appendChild(titulo);
+    const hr = document.createElement("hr");
+    div.appendChild(hr);
 
-  const ano = document.createElement("p");
-  ano.className = "card_descricao";
-  ano.innerText = `Ano: ${obj.ano}`;
-  div.appendChild(ano);
+    const ano = document.createElement("p");
+    ano.className = "card_descricao";
+    ano.innerText = `Ano: ${obj.ano}`;
+    div.appendChild(ano);
 
-  const diretor = document.createElement("p");
-  diretor.className = "card_descricao";
-  diretor.innerText = `Diretor: ${obj.diretor}`;
-  div.appendChild(diretor);
+    const diretor = document.createElement("p");
+    diretor.className = "card_descricao";
+    diretor.innerText = `Diretor: ${obj.diretor}`;
+    div.appendChild(diretor);
 
-  const generos = document.createElement("p");
-  generos.className = "card_descricao";
-  diretor.innerText = `Generos: ${obj.generos}`;
-  div.appendChild(generos);
+    const generos = document.createElement("p");
+    generos.className = "card_descricao";
+    diretor.innerText = `Generos: ${obj.generos}`;
+    div.appendChild(generos);
 
-  const elenco = document.createElement("p");
-  elenco.className = "card_descricao";
-  elenco.innerText = `Elenco: ${obj.elenco.join("-")}`;
-  div.appendChild(elenco);
-  elenco.style.textAlign = "center";
+    const elenco = document.createElement("p");
+    elenco.className = "card_descricao";
+    elenco.innerText = `Elenco: ${obj.elenco.join("-")}`;
+    div.appendChild(elenco);
+    elenco.style.textAlign = "center";
 
-  const hrDois = document.createElement("hr");
-  div.appendChild(hrDois);
+    const hrDois = document.createElement("hr");
+    div.appendChild(hrDois);
 
-  const ancora = document.createElement("a");
-  ancora.className = "card_ancora";
-  ancora.setAttribute("href", obj.instagram);
-  div.appendChild(ancora);
+    const ancora = document.createElement("a");
+    ancora.className = "card_ancora";
+    ancora.setAttribute("href", obj.instagram);
+    div.appendChild(ancora);
 
-  const instagramImage = document.createElement("img");
-  instagramImage.className = "instagram_image";
-  instagramImage.setAttribute("src", "./images/instagram.png");
+    const instagramImage = document.createElement("img");
+    instagramImage.className = "instagram_image";
+    instagramImage.setAttribute("src", "./images/instagram.png");
 
-  ancora.appendChild(instagramImage);
-});
+    ancora.appendChild(instagramImage);
+  });
+}
+
+preencherCards();
