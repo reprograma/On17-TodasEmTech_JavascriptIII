@@ -39,6 +39,9 @@ h1{
   border-radius: 10px;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 30%);
+  border: solid 2px darkgoldenrod;
+  
  
 }
 
