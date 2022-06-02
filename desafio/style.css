@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+    /* https://fonts.google.com/specimen/Nunito */
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1f1f1f;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 40px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 2px 2px 0 #7A7A7A;
+}
+
+
+h2 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 2rem;
+    color: white;
+}
+
+.cards_container {
+    display: flex;
+    width: 100vw;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(107, 107, 107);
+    width: 350px;
+    height: 550px;
+    margin: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    -webkit-box-shadow: 0px 8px 15px 2px rgba(255,255,255,0.42); 
+    box-shadow: 0px 8px 15px 2px rgba(255, 255, 255, 0.42);
+}
+
+.card_image {
+    margin-top: 1rem;
+    border-radius: 5%;
+    border: solid 2px #aaaaaa50;
+    width: 200px;
+    height: 180px;
+}
+
+.card_h2 {
+    font-size: 16x;
+    color: rgb(255, 255, 255);
+}
+
+hr {
+    width: 250px;
+    opacity: 0.2;
+    margin: 1rem 0;
+}
+
+.instagram_image {
+    width: 45px
+}

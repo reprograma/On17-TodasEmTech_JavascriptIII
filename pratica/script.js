@@ -11,7 +11,7 @@ const objetoJson = {
 const foto = document.getElementById('photography')
 const titulo = document.getElementById('title')
 const generos = document.getElementById('gender')
-const discografia = document.getElementById('discography')
+const elenco = document.getElementById('elenco')
 const instagram = document.getElementById('instagram')
 
 const preencherDados = () => {
@@ -23,3 +23,25 @@ const preencherDados = () => {
 }
 
 preencherDados()
+
+
+
+
+
+/* const imagem = document.getElementsByClassName('photography')
+const titulo = document.getElementById('title')
+const ano = document.getElementById('ano')
+const diretor = document.getElementById('diretor')
+const generos = document.getElementById('genderos')
+const elenco = document.getElementById('elenco')
+const instagram = document.getElementById('instagram')
+ */
+
+
+
+
+
+
+
+
+
