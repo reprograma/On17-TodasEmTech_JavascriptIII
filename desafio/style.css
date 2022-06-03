@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: #CC70FA;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.imagens{
+  border-radius: 5px;
+  width: 250px;
+  height: 200px;
+}
+
+main{
+  margin: 50px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1{
+  color: #d3d3d3;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+h2{
+  color: #d3d3d3;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+ul{
+  background: #7e459b;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 400px;
+  padding: 15px;
+  margin: 15px;
+  flex: 1;
+}
+
+li{
+  list-style: none;
+  margin: 0 auto;
+}
+
+.icon{
+  max-width: 20px;
+  margin: 15px 0;
+}
