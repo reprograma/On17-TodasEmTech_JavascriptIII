@@ -1,59 +1,93 @@
-/* 
-
-O exercício consiste em usar JavaScript para popular os campos corretamente com os dados do arquivo data.json (ou do objeto JSON) um site de informações sobre séries protagonizadas por mulheres trans e travestis, neste caso a página exibe 5 séries, em 5 cards diferentes em uma só página;
-
-Importante:
-
-1. Crie seu próprio layout usando HTML e CSS nos arquivos já criados nesta pasta;
-2. Repare que este Json é uma matriz, logo é possível usar métodos de array para acessar seu conteúdo;
-3. Entregue este exercício da maneira que conseguir, use o exemplo da sala para guiar nesta construção;
-
-*/
-
 let JSON = [
   {
-    "imagem": "./images/pose.jpg",
-    "titulo": "Pose",
-    "ano": "2018",
-    "diretor": "Ryan Murphy",
-    "generos": ["Drama"],
-    "elenco": ["Dominique Jackson", "Indya Moore", "Mj Rodriguez", "Angelica Ross", "Hailie Sahar"], 
-    "instagram": "https://www.instagram.com/poseonfx/"
+    "image": "./images/pose.jpg",
+    "title": "Pose",
+    "year": "2018",
+    "director": "Ryan Murphy",
+    "genre": ["Drama"],
+    "cast": ["Dominique Jackson", "Indya Moore", "Mj Rodriguez", "Angelica Ross", "Hailie Sahar"],
   },
   {
-    "imagem": "./images/manhas.jpg",
-    "titulo": "Manhãs de Setembro",
-    "ano": "2021",
-    "diretor": "Luis Pinheiro",
-    "generos": ["Drama"],
-    "elenco": ["Liniker", "Linn da Quebrada"], 
-    "instagram": "https://www.instagram.com/explore/tags/manhasdesetembroserie/"
+    "image": "./images/manhas.jpg",
+    "title": "Manhãs de Setembro",
+    "year": "2021",
+    "director": "Luis Pinheiro",
+    "genre": ["Drama"],
+    "cast": ["Liniker", "Linn da Quebrada"],
   },
   {
-    "imagem": "./images/euphoria.jpg",
-    "titulo": "Euphoria",
-    "ano": "2019",
-    "diretor": "Sam Levinson",
-    "generos": ["Drama"],
-    "elenco": ["Hunter Schafer", "Ron Leshem", "Daphna Levin"], 
-    "instagram": "https://www.instagram.com/euphoria/"
+    "image": "./images/euphoria.jpg",
+    "title": "Euphoria",
+    "year": "2019",
+    "director": "Sam Levinson",
+    "genre": ["Drama"],
+    "cast": ["Hunter Schafer", "Ron Leshem", "Daphna Levin"],
   },
   {
-    "imagem": "./images/veneno.jpeg",
-    "titulo": "Veneno",
-    "ano": "2020",
-    "diretor": "Javier Ambrossi",
-    "generos": ["Drama", "Biografia"],
-    "elenco": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"], 
-    "instagram": "https://www.instagram.com/venenolaserie/"
+    "image": "./images/veneno.jpeg",
+    "title": "Veneno",
+    "year": "2020",
+    "director": "Javier Ambrossi",
+    "genre": ["Drama", "Biografia"],
+    "cast": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"],
   },
   {
-    "imagem": "./images/legendary.jpg",
-    "titulo": "Legendary",
-    "ano": "2020",
-    "diretor": "Rik Reinholdtsen",
-    "generos": ["Reality Show", "Competição"],
-    "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
-    "instagram": "https://www.instagram.com/legendarymax/"
-  },
+    "image": "./images/legendary.jpg",
+    "title": "Legendary",
+    "year": "2020",
+    "director": "Rik Reinholdtsen",
+    "genre": ["Reality Show", "Competição"],
+    "cast": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"],
+  }
 ]
+
+var cardContainer = document.querySelector(".display");
+
+function showCards() {
+  JSON.forEach((obj) => {
+    let div = document.createElement("div");
+    div.className = "card";
+    cardContainer.appendChild(div);
+
+    let createLine = () => { /* Criando "linhas" entre os elementos percorridos para maior legibilidade no browser. */
+      let line = document.createElement("hr"); /* Não encontrei solução "melhor" do que usar a tag hr dessa forma para criar as "linhas". */
+      div.appendChild(line);
+    }
+
+    let img = document.createElement("img");
+    img.setAttribute("src", obj.image);
+    img.className = "image";
+    div.appendChild(img);
+
+    let title = document.createElement("h2");
+    title.className = "cardTitle";
+    title.innerText = `${obj.title}`;
+    div.appendChild(title);
+
+    createLine();
+
+    let year = document.createElement("p");
+    year.innerText = `${obj.year}`;
+    div.appendChild(year);
+
+    createLine();
+
+    let director = document.createElement("p");
+    director.innerText = `${obj.director}`;
+    div.appendChild(director);
+
+    createLine();
+
+    let genre = document.createElement("p");
+    genre.innerText = `${obj.genre.join(", ")}`; /* Utilizando o join(", ") para dar virgula e espaçamento ao objeto chamado para fins de legibilidade no browser. */
+    div.appendChild(genre);
+
+    createLine();
+
+    let cast = document.createElement("p");
+    cast.innerText = `${obj.cast.join(", ")}`;
+    div.appendChild(cast);
+  });
+}
+
+showCards();
