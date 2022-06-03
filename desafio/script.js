@@ -59,7 +59,7 @@ const dataSeries = [
 const main = document.querySelector("main");
 
 // for(i=0; i<=dataSeries.length-1; i+=1){
-dataSeries.forEach((item, index) => {
+dataSeries.forEach((item => {
   console.log(item.imagem)
 
   const ul = document.createElement("ul");
