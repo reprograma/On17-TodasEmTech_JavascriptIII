@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text" id="campo1" value="Oieee"><br>
+  <input type="text" id="campo2"><br><br>
+  <button id="btn" onclick="copiar()">Copiar texto</button>
+
+  <label>"Digite algo aqui:"</label> 
+  <input type="text" name="txt" value="" onchange="transcrever(this.value)"> 
+  <!-- tentem mudar onchange para onkeyup e vejam o que acontece-->
+  <p></p>
+
+  <script>
+    
+    function transcrever(value) {
+      document.querySelector('p').innerText = value
+    }
+    
+    function copiar() {
+      document.getElementById("campo2").value = document.getElementById("campo1").value
+    }
+    // ou
+    // const botao = document.getElementById("btn")
+    // botao.addEventListener('click', () => document.getElementById("campo2").value = document.getElementById("campo1").value)
+  </script>
+
+  
+
+
+</body>
+</html>
