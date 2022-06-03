@@ -1,4 +1,4 @@
-[
+let JSON = [
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
