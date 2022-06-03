@@ -58,38 +58,41 @@ const dataSeries = [
 
 const main = document.querySelector("main");
 
-for(i=0; i<=dataSeries.length-1; i+=1){
+// for(i=0; i<=dataSeries.length-1; i+=1){
+dataSeries.forEach((item, index) => {
+  console.log(item.imagem)
+
   const ul = document.createElement("ul");
   main.appendChild(ul);
   const liImagem = document.createElement("li");
   const imagem = document.createElement("img");
   ul.appendChild(liImagem);
   liImagem.appendChild(imagem);
-  imagem.src = dataSeries[i].imagem;
-  imagem.setAttribute("alt", dataSeries[i].titulo);
+  imagem.src = item.imagem;
+  imagem.setAttribute("alt", item.titulo);
   imagem.classList.add("imagens");
 
   const liTitulo = document.createElement("li");
   ul.appendChild(liTitulo);
   const nomeSerie = document.createElement("h2");
   liTitulo.appendChild(nomeSerie);
-  nomeSerie.innerHTML = `<strong>Título: </strong> ${dataSeries[i].titulo}`;
+  nomeSerie.innerHTML = `<strong>Título: </strong> ${item.titulo}`;
 
   const liAno = document.createElement("li");
   ul.appendChild(liAno);
-  liAno.innerHTML = `<strong>Ano: </strong> ${dataSeries[i].ano}`;
+  liAno.innerHTML = `<strong>Ano: </strong> ${item.ano}`;
 
   const liDiretor = document.createElement("li");
   ul.appendChild(liDiretor);
-  liDiretor.innerHTML = `<strong>Diretor: </strong> ${dataSeries[i].diretor}`;
+  liDiretor.innerHTML = `<strong>Diretor: </strong> ${item.diretor}`;
 
   const liGeneros = document.createElement("li");
   ul.appendChild(liGeneros);
-  liGeneros.innerHTML = `<strong>Gênero: </strong> ${dataSeries[i].generos}`;
+  liGeneros.innerHTML = `<strong>Gênero: </strong> ${item.generos}`;
 
   const liElenco = document.createElement("li");
   ul.appendChild(liElenco);
-  liElenco.innerHTML = `<strong>Elenco: </strong> ${dataSeries[i].elenco}`;
+  liElenco.innerHTML = `<strong>Elenco: </strong> ${item.elenco}`;
 
   const liInstagram = document.createElement("li");
   ul.appendChild(liInstagram);
@@ -97,8 +100,9 @@ for(i=0; i<=dataSeries.length-1; i+=1){
   const iconInstagram = document.createElement("img");
   liInstagram.appendChild(linkInstagram);
   linkInstagram.appendChild(iconInstagram);
-  linkInstagram.setAttribute("href", dataSeries[i].instagram);
+  linkInstagram.setAttribute("href", item.instagram);
   linkInstagram.setAttribute("target", "_blank");
   iconInstagram.src = "./images/icon-instagram.png";
   iconInstagram.classList.add("icon");
-}
+})
+// }

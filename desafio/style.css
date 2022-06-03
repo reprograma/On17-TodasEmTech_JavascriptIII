@@ -10,8 +10,7 @@ body{
 
 .imagens{
   border-radius: 5px;
-  width: 250px;
-  height: 200px;
+  width: 200px;
 }
 
 main{
@@ -43,6 +42,9 @@ ul{
   padding: 15px;
   margin: 15px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 li{
