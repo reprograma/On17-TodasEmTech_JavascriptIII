@@ -58,8 +58,14 @@ const dataSeries = [
 
 const main = document.querySelector("main");
 
+<<<<<<< HEAD
 for(i=0; i<=dataSeries.length-1; i+=1){
   console.log(dataSeries[i]);
+=======
+// for(i=0; i<=dataSeries.length-1; i+=1){
+dataSeries.forEach((item => {
+  console.log(item.imagem)
+>>>>>>> f7c24a9e571b4af3e5498ce089957f975c70d964
 
   const ul = document.createElement("ul");
   main.appendChild(ul);
@@ -105,6 +111,11 @@ for(i=0; i<=dataSeries.length-1; i+=1){
   linkInstagram.setAttribute("target", "_blank");
   iconInstagram.src = "./images/icon-instagram.png";
   iconInstagram.classList.add("icon");
+<<<<<<< HEAD
 }
 
 
+=======
+})
+// }
+>>>>>>> f7c24a9e571b4af3e5498ce089957f975c70d964
