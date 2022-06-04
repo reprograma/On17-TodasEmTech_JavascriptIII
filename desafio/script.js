@@ -10,7 +10,7 @@ Importante:
 
 */
 
-let JSON = [
+const objetoJson = [
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
@@ -43,7 +43,7 @@ let JSON = [
     "titulo": "Veneno",
     "ano": "2020",
     "diretor": "Javier Ambrossi",
-    "generos": ["Drama", "Biografia"],
+    "generos": ["Drama", " Biografia"],
     "elenco": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"], 
     "instagram": "https://www.instagram.com/venenolaserie/"
   },
@@ -52,8 +52,26 @@ let JSON = [
     "titulo": "Legendary",
     "ano": "2020",
     "diretor": "Rik Reinholdtsen",
-    "generos": ["Reality Show", "Competição"],
+    "generos": ["Reality Show", " Competição"],
     "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+const vincularDados = () => {
+ objetoJson.forEach((elemento, index) => {
+    const foto = document.getElementById(`photo-${index}`)
+    const titulo = document.getElementById(`title-${index}`)
+    const generos = document.getElementById(`gender-${index}`)
+    const cast = document.getElementById(`cast-${index}`)
+    const instagram = document.getElementById(`instagram-${index}`)
+
+    foto.setAttribute('src', elemento.imagem)
+    titulo.innerText = elemento.titulo
+    generos.innerHTML = elemento.generos
+    cast.innerText = elemento.elenco.join(' - ')
+    instagram.setAttribute('href', elemento.instagram)
+  });
+}
+
+vincularDados()
