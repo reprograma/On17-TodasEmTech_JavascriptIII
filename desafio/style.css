@@ -8,9 +8,24 @@ body{
   font-family: 'IBM Plex Mono', monospace;
 }
 
-.imagens{
-  border-radius: 5px;
-  width: 200px;
+h1{
+  color: #d3d3d3;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+@media (max-width: 990px){
+  h1{
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width: 500px){
+  h1{
+    font-size: 1.2rem;
+  }
 }
 
 main{
@@ -20,36 +35,39 @@ main{
   justify-content: center;
 }
 
-h1{
-  color: #d3d3d3;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 30px;
+.imagens{
+  border-radius: 10px;
+  width: 250px;
 }
 
 h2{
   color: #d3d3d3;
   font-size: 1.5rem;
+  text-align: center;
   text-transform: uppercase;
   padding: 10px;
 }
 
 ul{
   background: #7e459b;
+  box-shadow: 15px 10px 30px #292929;
   text-align: center;
   border-radius: 10px;
   max-width: 400px;
   padding: 15px;
   margin: 15px;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 }
 
 li{
+  text-align: left;
   list-style: none;
   margin: 0 auto;
+}
+
+.li-img, 
+.li-icon {
+  text-align: center;
 }
 
 .icon{
