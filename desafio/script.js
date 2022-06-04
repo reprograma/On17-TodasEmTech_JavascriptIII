@@ -101,16 +101,21 @@ function movieCard(movie) {
   `;
 }
 
-function showMovies() {
-  const moviesList = document.querySelector("#movies-list");
+function renderCarousel() {
+  const container = document.querySelector(".carousel-inner");
 
-  for (const movie of movies) {
+  for (const movie of movies.slice(0, 3)) {
     const movieCardHtml = movieCard(movie);
-    const ulElement = document.createElement("li");
-    ulElement.classList.add("cards");
-    ulElement.innerHTML = movieCardHtml;
-    moviesList.appendChild(ulElement);
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("carousel-item");
+    wrapper.innerHTML = movieCardHtml;
+    // wrapper.innerHTML = `<img alt="xx" class="d-block w-100" src="http://placekitten.com/200/300"/>`;
+    container.appendChild(wrapper);
   }
+
+  $(".carousel-item").first().addClass("active");
+  $(".carousel-indicators > li").first().addClass("active");
+  $("#carousel").carousel();
 }
 
-showMovies();
+window.onload = renderCarousel;
