@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif; /* https://fonts.google.com/specimen/Nunito */
+    cursor: pointer;
+  }
+  
+  body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #7b1f0d; /* https://flatuicolors.com/palette/de */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #main-wrapper-0 {
+    background-color: #c5505063;
+    backdrop-filter: blur(10px);
+    min-width: 35rem;
+    min-height: 60vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 2px 4px 10px #57657470;
+    margin-left: 20px;
+  }
+  #main-wrapper-1 {
+    background-color: #1751155b;
+    backdrop-filter: blur(10px);
+    min-width: 35rem;
+    min-height: 60vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 2px 4px 10px #57657470;
+    margin-left: 20px;
+  }
+  #main-wrapper-2 {
+    background-color: #2f22a772;
+    backdrop-filter: blur(10px);
+    min-width: 35rem;
+    min-height: 60vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 2px 4px 10px #57657470;
+    margin-left: 20px;
+  }
+  #main-wrapper-3 {
+    background-color: #a1538a67;
+    backdrop-filter: blur(10px);
+    min-width: 35rem;
+    min-height: 60vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 2px 4px 10px #57657470;
+    margin-left: 20px;
+  }
+  #main-wrapper-4 {
+    background-color: #6f44be6d;
+    backdrop-filter: blur(10px);
+    min-width: 35rem;
+    min-height: 60vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 2px 4px 10px #57657470;
+    margin-left: 20px;
+  }
+  
+  
+  #photography {
+    margin-top: 1rem;
+    border-radius: 50%;
+    border: solid 2px #a55eea50;
+  }
+  
+  #title-0 {
+    margin: 2rem 0 1rem 0;
+    font-size: 4rem;
+    color: #f3f3f399;
+  }
+
+  #title-1 {
+    margin: 2rem 0 1rem 0;
+    font-size: 4rem;
+    color: #f3f3f399;
+  }
+
+  #title-2 {
+    margin: 2rem 0 1rem 0;
+    font-size: 4rem;
+    color: #f3f3f399;
+  }
+  
+  #title-3 {
+    margin: 2rem 0 1rem 0;
+    font-size: 4rem;
+    color: #f3f3f399;
+  }
+   
+  #title-4 {
+    margin: 2rem 0 1rem 0;
+    font-size: 4rem;
+    color: #f3f3f399;
+  }
+  
+  .infos-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .tipography {
+    font-size: 1.6rem;
+    color: #f3f3f399;
+    font-weight: 600;
+  }
+  
+  hr {
+    margin: 1rem 0;
+    opacity: .2;
+  }
+  
+  .dynamic-text {
+    font-size: 1.3rem;
+    color: #c4b0b099;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .fab {
+    margin-top: 1.8rem;
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    filter: drop-shadow(1px 1px 1px #50585c90);
+    color: rgb(7, 7, 7);
+  }
+  
