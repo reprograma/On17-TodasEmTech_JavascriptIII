@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+
+/* HEADER */
+.header {
+    min-height: 80vh;
+    width: 100%;
+    /*geralmente corrige distorção*/
+    background-size: cover;
+    background-image: url(./images/Cine\ trava.png);
+    background-position: top;
+    display: flex;
+    /* Aligne é para eixo Y */
+    align-items: flex-end;
+    /*justify content é para o eixo X*/
+    justify-content: center;
+    background-size: contain;
+}
+.header_titulo{
+    padding-top: 28rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    text-shadow: 4px 3px 9px #000;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e4c9f2;
+
+}
+#Cine_Trava {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    margin: 10% 0;
+}
+.Cards {
+    display: flex;
+    gap: 20px;
+    height: auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(15.5px);
+    -webkit-backdrop-filter: blur(15.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2px 20px;
+    gap: 5px;
+    position: relative;
+    top: 0;
+    margin: 0;
+    max-width: 200px; 
+    max-height: 500px !important; 
+  
+}
+*/ #titulo {
+    white-space: nowrap;
+}
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+section {
+    transition: 1.5s;
+    height: 100px;
+}
+
