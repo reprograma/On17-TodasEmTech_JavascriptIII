@@ -1,47 +1,53 @@
-[
-  {
-    "imagem": "./images/pose.jpg",
-    "titulo": "Pose",
-    "ano": "2018",
-    "diretor": "Ryan Murphy",
-    "generos": ["Drama"],
-    "elenco": ["Dominique Jackson", "Indya Moore", "Mj Rodriguez", "Angelica Ross", "Hailie Sahar"], 
-    "instagram": "https://www.instagram.com/poseonfx/"
-  },
-  {
-    "imagem": "./images/manhas.jpg",
-    "titulo": "Manhãs de Setembro",
-    "ano": "2021",
-    "diretor": "Luis Pinheiro",
-    "generos": ["Drama"],
-    "elenco": ["Liniker", "Linn da Quebrada"], 
-    "instagram": "https://www.instagram.com/explore/tags/manhasdesetembroserie/"
-  },
-  {
-    "imagem": "./images/euphoria.jpg",
-    "titulo": "Euphoria",
-    "ano": "2019",
-    "diretor": "Sam Levinson",
-    "generos": ["Drama"],
-    "elenco": ["Hunter Schafer", "Ron Leshem", "Daphna Levin"], 
-    "instagram": "https://www.instagram.com/euphoria/"
-  },
-  {
-    "imagem": "./images/veneno.jpeg",
-    "titulo": "Veneno",
-    "ano": "2020",
-    "diretor": "Javier Ambrossi",
-    "generos": ["Drama", "Biografia"],
-    "elenco": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"], 
-    "instagram": "https://www.instagram.com/venenolaserie/"
-  },
-  {
-    "imagem": "./images/legendary.jpg",
-    "titulo": "Legendary",
-    "ano": "2020",
-    "diretor": "Rik Reinholdtsen",
-    "generos": ["Reality Show", "Competição"],
-    "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
-    "instagram": "https://www.instagram.com/legendarymax/"
-  }
-]
+{
+
+  "series":[
+     {
+       "imagem": "./images/pose.jpg",
+       "titulo": "Pose",
+       "ano": "2018",
+       "diretor": "Direção de  Ryan Murphy ",
+       "generos": ["Drama"],
+       "elenco": ["Mj Rodriguez","Dominique Jackson", "Indya Moore" ], 
+       "instagram": "https://www.instagram.com/poseonfx/"
+     },
+     {
+       "imagem": "./images/manhas.jpg",
+       "titulo": "Manhãs de Setembro",
+       "ano": "2021",
+       "diretor": "Direção de Luis Pinheiro",
+       "generos": ["Drama"],
+       "elenco": ["Liniker ","Linn da Quebrada", "Karine Teles","Thomas Aquino"], 
+       "instagram": "https://www.instagram.com/explore/tags/manhasdesetembroserie/"
+     },
+     {
+       "imagem": "./images/euphoria.jpg",
+       "titulo": "Euphoria",
+       "ano": "2019",
+       "diretor": "Direção de Sam Levinson",
+       "generos": ["Drama"],
+       "elenco": ["Zendaya " ,"Hunter Schafer"], 
+       "instagram": "https://www.instagram.com/euphoria/"
+     },
+     {
+       "imagem": "./images/superdrags.jpg",
+       "titulo": "Super Drags",
+        "ano": "2018",
+        "diretor": "Direção de Anderson Mahanski",
+        "generos": ["Animação para adultos"],
+        "elenco": ["Pabllo Vittar","Fernando Mendonça"] 
+       
+     },
+     {
+       "imagem": "./images/legendary.jpg",
+       "titulo": "Legendary",
+       "ano": "2020",
+       "diretor": " Direção de Rik Reinholdtsen",
+       "generos": ["Reality Show", "Competição"],
+       "elenco": ["Leiomy Maldonado"], 
+       "instagram": "https://www.instagram.com/legendarymax/"
+     }
+    
+   ]
+
+
+}
