@@ -13,14 +13,12 @@ body {
   background-color: black;
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 #title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-size: 2.5rem;
   padding: 2rem;
   color: #f3f3f399;
@@ -35,6 +33,7 @@ body {
 .cards {
   background-color: #f1f1f140;
   padding: 2rem;
+  margin: auto;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -93,9 +92,10 @@ hr {
   filter: drop-shadow(1px 1px 1px #576574b3);
 }
 
-/* Carousel */
+.carousel {
+  width: 80%;
+}
 
-/* #carousel {
-  display: none;
-  max-height: min-content;
-} */
+.carousel-item {
+  width: 100%;
+}

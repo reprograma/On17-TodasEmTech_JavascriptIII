@@ -77,7 +77,6 @@ function movieCard(movie) {
     <h2 class = "subtitle">${movie.titulo}</h2>
   </div>
   <div class="infos-wrapper">
-    <hr />
     <p class="tipography">Ano: ${
       movie.ano
     }<br /><span class="dynamic-text"></span></p>
@@ -104,18 +103,23 @@ function movieCard(movie) {
 function renderCarousel() {
   const container = document.querySelector(".carousel-inner");
 
-  for (const movie of movies.slice(0, 3)) {
+  movies.forEach((movie, index) => {
+    $(
+      '<li data-target="#carousel" data-slide-to="' + index + '"></li>'
+    ).appendTo(".carousel-indicators");
     const movieCardHtml = movieCard(movie);
+    const outerWrapper = document.createElement("div");
     const wrapper = document.createElement("div");
-    wrapper.classList.add("carousel-item");
+    wrapper.classList.add("cards");
+    outerWrapper.appendChild(wrapper);
+    outerWrapper.classList.add("carousel-item");
     wrapper.innerHTML = movieCardHtml;
-    // wrapper.innerHTML = `<img alt="xx" class="d-block w-100" src="http://placekitten.com/200/300"/>`;
-    container.appendChild(wrapper);
-  }
+    container.appendChild(outerWrapper);
+  });
 
   $(".carousel-item").first().addClass("active");
   $(".carousel-indicators > li").first().addClass("active");
-  $("#carousel").carousel();
+  $("#carousel").carousel({ interval: false });
 }
 
 window.onload = renderCarousel;
