@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Teko', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2.5rem;
+}
+
+header > h2 {
+    padding-top: 3rem;
+    font-size: 2rem;
+}
+
+body {
+    background: rgb(246,246,193);
+    background: radial-gradient(circle, rgba(246,246,193,1) 16%, rgba(211,235,218,1) 100%);
+}
+
+.container__series {
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    place-items: center;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    width: 25rem;
+    height: 50rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card > h3 {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 1.80rem;
+}
+
+.card__text {
+    padding: 1.25rem;
+    font-size: 1.45rem;
+}
+
+.image {
+    width: 85%;
+    height: 35vh;
+    border-radius: 2rem;
+}
+
+.instagram__img {
+padding: 0.625rem 0.625rem;
+align-self: center;
+}
