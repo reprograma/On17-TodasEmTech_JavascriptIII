@@ -10,7 +10,7 @@ Importante:
 
 */
 
-let JSON = [
+let json = [
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
@@ -56,4 +56,37 @@ let JSON = [
     "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
     "instagram": "https://www.instagram.com/legendarymax/"
   },
-]
+];
+
+let popularTabela = json.map(function(serie) {
+  return `
+        <div class="card">
+        <img src=${serie.imagem} class="image" />
+        <h3 id="title__euphoria">${serie.titulo}</h3>
+        <div class="info__cards">
+          <p class="card__text">
+            Ano de lançamento: ${serie.ano}
+          </p> 
+          <hr>
+          <p class="card__text">
+            Diretor: ${serie.diretor}
+          </p>
+          <hr>
+          <p class="card__text">
+            Gênero: ${serie.generos}
+          </p>
+          <hr>
+          <p class="card__text">
+            Elenco: ${serie.elenco.join(", ")}
+          </p>
+          <hr>
+          <a class="instagram__img" href=${serie.instagram} target="_blank">
+            <img src="images/icon-instagram.png" />
+          </a>
+        </div>
+        </div>
+    `;
+});
+
+document.querySelector(".container__series").innerHTML = popularTabela.join('');
+
