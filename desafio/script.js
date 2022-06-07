@@ -17,7 +17,7 @@ let JSON = [
     "ano": "2018",
     "diretor": "Ryan Murphy",
     "generos": ["Drama"],
-    "elenco": ["Dominique Jackson", "Indya Moore", "Mj Rodriguez", "Angelica Ross", "Hailie Sahar"], 
+    "elenco": ["Dominique Jackson", " Indya Moore", " Mj Rodriguez", " Angelica Ross", " Hailie Sahar"], 
     "instagram": "https://www.instagram.com/poseonfx/"
   },
   {
@@ -26,7 +26,7 @@ let JSON = [
     "ano": "2021",
     "diretor": "Luis Pinheiro",
     "generos": ["Drama"],
-    "elenco": ["Liniker", "Linn da Quebrada"], 
+    "elenco": ["Liniker", " Linn da Quebrada"], 
     "instagram": "https://www.instagram.com/explore/tags/manhasdesetembroserie/"
   },
   {
@@ -35,7 +35,7 @@ let JSON = [
     "ano": "2019",
     "diretor": "Sam Levinson",
     "generos": ["Drama"],
-    "elenco": ["Hunter Schafer", "Ron Leshem", "Daphna Levin"], 
+    "elenco": ["Hunter Schafer", " Ron Leshem", " Daphna Levin"], 
     "instagram": "https://www.instagram.com/euphoria/"
   },
   {
@@ -43,8 +43,8 @@ let JSON = [
     "titulo": "Veneno",
     "ano": "2020",
     "diretor": "Javier Ambrossi",
-    "generos": ["Drama", "Biografia"],
-    "elenco": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"], 
+    "generos": ["Drama", " Biografia"],
+    "elenco": ["Daniela Santiago", " Jedet Sánchez", " Isabel Torres", " Lola Rodríguez", " Paca La Piraña"], 
     "instagram": "https://www.instagram.com/venenolaserie/"
   },
   {
@@ -52,8 +52,69 @@ let JSON = [
     "titulo": "Legendary",
     "ano": "2020",
     "diretor": "Rik Reinholdtsen",
-    "generos": ["Reality Show", "Competição"],
-    "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
+    "generos": ["Reality Show", " Competição"],
+    "elenco": ["Leiomy Maldonado", " Megan Thee Stallion", " Dashaun Wesley"], 
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+const container = document.querySelector(".container-cards");
+
+function preencherCards() {
+JSON.forEach((obj) => {
+  const div = document.createElement("div");
+  div.className = "card";
+  container.appendChild(div); 
+
+  //repetir os comandos para todos os items
+
+  const img = document.createElement("img");
+  img.setAttribute("src", obj.imagem); // Preenchendo os elementos com a informção dada pela lista do array (tbm repetir esse processo para as demais informações)
+  img.className = "imagem-card";
+  div.appendChild(img);
+
+  const titulo = document.createElement("h2");
+  titulo.className = "h2-card";
+  titulo.innerText = `${obj.titulo}`;
+  div.appendChild(titulo);
+
+  const hr = document.createElement("hr");
+  div.appendChild(hr);
+
+  const ano = document.createElement("p");
+  ano.className = "ano"
+  ano.innerText = `${obj.ano}`;
+  div.appendChild(ano);
+
+  const diretor = document.createElement("p");
+  diretor.className = "diretor";
+  diretor.innerText = `${obj.diretor}`;
+  div.appendChild(diretor);
+
+  const generos = document.createElement("p");
+  generos.className = "generos";
+  generos.innerText = `${obj.generos}`;
+  div.appendChild(generos);
+
+  const elenco = document.createElement("p");
+  elenco.className = "elenco";
+  elenco.innerText = `${obj.elenco[0]}`;
+  div.appendChild(elenco);
+
+  const hrDois = document.createElement("hr");
+  div.appendChild(hrDois);
+
+  const ancora = document.createElement("a");
+  ancora.className = "ancora-card";
+  ancora.setAttribute("href", obj.instagram);
+  div.appendChild(ancora);
+
+  const instagramImage = document.createElement("img");
+  instagramImage.className = "imagem-instagram";
+  instagramImage.setAttribute("src", "./images/instagram.png");
+
+  ancora.appendChild(instagramImage);
+});
+}
+
+preencherCards(); 
