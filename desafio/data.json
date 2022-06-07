@@ -1,4 +1,5 @@
-[
+{
+  "serieTv":[
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
@@ -44,4 +45,4 @@
     "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
     "instagram": "https://www.instagram.com/legendarymax/"
   }
-]
+]}
