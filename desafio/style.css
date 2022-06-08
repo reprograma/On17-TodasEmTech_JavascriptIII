@@ -32,6 +32,14 @@
   padding: 0 4rem;
   flex-wrap: wrap;
 }
+@media screen and (max-width:320px) {
+  #main-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+}
 
 hr {
   width: 100%;
@@ -88,7 +96,12 @@ hr {
   text-transform: uppercase;
   flex-wrap: wrap;
 }
-
+@media screen and (max-width: 320px) {
+  .info-card {
+    margin: auto;
+    min-width: 10rem;
+  }
+}
 .dynamic-text {
   font-size: 1.2rem;
   font-weight: 600;
