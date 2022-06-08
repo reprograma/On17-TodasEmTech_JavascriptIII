@@ -1,24 +1,22 @@
 const aluna = {
-  nome: { primeiro: "Lilit", segundo: "Bandeira" },
-  "idade da aluna": 32,
-  cidade: "Recife",
-  interesses: ["música", "animes"],
-  saudacao: (nome) => console.log(`olá ${nome}`),
+  nome: {primeiro: "Mayara",  segundo: "Rocha"},
+  "idade da aluna": 26,
+  cidade: "Guarulhos",
+  interesses: ["músicas","séries"],
+  saudacao: (nome) => console.log(`Olá ${nome}`),
 };
+// Desestruturando um objeto
+let { nome, interesses } = aluna
+
+let { segundo} = nome
+
+console.log(segundo)
 
 // notação de ponto
 
-console.log(aluna.interesses[1])
-aluna.saudacao('Nana')
+// console.log(aluna.interesses[1])
+ //aluna.saudacao('Lara')
 
-// notação colchetes
+ // notação colchetes
 
-console.log(aluna['nome']['segundo'])
-
-// desestruturando objetos
-
-let { nome , interesses } = aluna
-
-let { segundo } = nome 
-
-console.log(segundo)
+//console.log(aluna['nome']['segundo'])
