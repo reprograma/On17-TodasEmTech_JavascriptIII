@@ -10,12 +10,7 @@
 }
 
 body {
-  min-height: 100vh;
-  width: 100%;
-  background-color: #8854d0; /* https://flatuicolors.com/palette/de */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #a55eea50;
 }
 
 #main-wrapper {
@@ -25,28 +20,37 @@ body {
   min-height: 60vh;
   padding: 3rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  border-radius: 2rem;
-  box-shadow: 2px 4px 10px #57657470;
+  justify-content: space-around;
+
 }
 
-#photography {
+.photography {
   margin-top: 1rem;
   border-radius: 50%;
   border: solid 2px #a55eea50;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
 }
 
-#title {
+.title {
   margin: 2rem 0 1rem 0;
   font-size: 4rem;
   color: #f3f3f399;
 }
 
 .infos-wrapper {
+  width: 35%;
+  background-color: #8854d0; /* https://flatuicolors.com/palette/de */
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin-top: 30px;
+  border-radius: 2rem;
+  box-shadow: 2px 4px 10px #57657470;
+  padding: 20px;
 }
 
 .tipography {
