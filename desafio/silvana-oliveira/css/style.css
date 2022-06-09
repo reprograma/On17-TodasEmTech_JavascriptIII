@@ -1,0 +1,124 @@
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+.ranking{
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: #a4152c
+}
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 5vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(17, 17, 17, 0) 40%, rgba(158, 56, 73, 0.95) 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+.pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+}
+.nxt-btn {
+    right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+    opacity: 0.6;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    opacity: 1;
+}
+.box{
+    width: 35rem;
+    height: 58rem;
+    background-image: url("../images/darkgrey.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 1rem 1.2rem rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 1rem 2rem;
+}
+h1{
+    text-shadow: 0 0 0.3em rgb(10, 38, 99), 0 0 0.3em #b1233b;
+    color: #65429c;
+    font-weight: bold;
+    letter-spacing: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title{
+    text-shadow: 0 0 0.2em rgb(110, 33, 22), 0 0 0.2em #a4152c;
+    color: #a4152c;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    margin: 2rem;
+}
+#title2{
+    font-size: 2.8rem;
+}
+.model{
+    height: 45%;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 3rem;
+}
+.details{
+    align-items: center;
+    width: 21rem;
+    text-align: center;
+}
+.details hr{
+    border-color: #a4152c;
+    margin: 0.8rem;
+}
+.tipography {
+    margin: 0;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+}
+span{
+    color: #FF7673;
+}
+.content-slider{
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
