@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    background-color: #5917e8;
+    color: white;
+} 
+
+
+h1 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 5rem;
+}
+
+#container{
+    padding: 3rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 90%;
+    margin: auto;
+}
+
+div.serie{
+    padding: 2rem 2rem 0 2rem;
+    
+}
+
+div.serie>h2{
+    font-size: 4rem;
+}
+
+div .serie>img{
+    width: 500px;
+    height: 455px;
+}
+
+div.serie>p, 
+a{
+   font-size: 2rem; 
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
