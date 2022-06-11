@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Nunito', sans-serif;
+  background-color: #d3d3d3;
+}
+
+body {
+  min-height: 40rem;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  padding-top: 2rem;
+  color: #c74385;
+  font-size: 1.9rem;
+  box-sizing: border-box;
+}
+
+.cards_container{
+  display:
+  width: 125rem;
+  height: 40rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  max-width: 19rem;
+  margin: 5rem auto 0;
+  background-color: #42515a;
+  box-shadow: 0 0.625rem 5.625rem #00000024;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 0.938rem;
+  padding: 1.2rem 1.2rem;
+}
+
+.card_image {
+  margin-top: 3rem;
+  border-radius: 62.5rem;
+  border: solid 0.125rem #c0bdb550;
+  width: 13rem;
+  height: 13rem;
+  border: 0.5rem solid #c74385;
+  box-shadow: 0 0 1.25rem #00000033;
+}
+
+.card_h2 {
+  font-size: 1.5rem;
+  color: #c74385;
+  background-color: #42515a;
+}
+
+.card_descricao {
+font-size: 1rem;
+color: white;
+background-color: #42515a;
+}
+
+hr {
+  width: 15.5rem;
+  margin: 1rem 0;
+  border-color: #c74385;
+}
+
+.instagram_image {
+  width: 5rem;
+  background-color: #42515a;
+}  
