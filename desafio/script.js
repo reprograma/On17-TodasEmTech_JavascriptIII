@@ -10,7 +10,7 @@ Importante:
 
 */
 
-let JSON = [
+const JSON = [
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
@@ -57,3 +57,68 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+const cardContainer = document.querySelector(".cards_container");
+/*CRIAR FUNÇÃO PARA PREENCHER OS CARDS*/
+function preencherCards() {
+  JSON.forEach((obj) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    cardContainer.appendChild(div);
+
+//REPETIR OS COMANDOS PARA TODOS OS ITENS PUXANDO AS ARRAYS//
+  const img = document.createElement(img);
+  img.setAttribute("scr", obj.imagem);
+  img.className = "card_image"
+  div.appendChild(img);
+
+  const titulo = document.createElement("h2");
+  titulo.className = "card_h2";
+  titulo.innerText = '$obj.titulo]';
+  div.appendChild(titulo);
+
+
+  const hr = document.createElement("hr");
+  div.appendChild(hr);
+
+  const ano = document.createElement(p);
+  ano.className = "ano"
+  ano.innerText = '$[obj.ano]';
+  div.appendChild(ano)
+
+  const diretor = document.createElement(p);
+  diretor.className = "diretor"
+  diretor.innerText = '$[obj.diretor]';
+  div.appendChild(diretor)
+
+  const generos = document.createElement(p);
+  generos.className = "generos"
+  generos.innerText = '$[obj.generos]';
+  div.appendChild(generos)
+
+  const elenco = document.createElement(p);
+  elenco.className = "elenco"
+  elenco.innerText = '${obj.elenco}';
+  div.appendChild(elenco)
+
+  const hrDois = document.createElement("hr")
+  div.appendChild(hrDois);
+
+  const ancora = document.createElement("a")
+  ancora.className = "card_ancora";
+  ancora.setAttribute("href", obj.instagram);
+  div.appendChild(ancora);
+  
+  const instagramImage = document.createElement("img");
+  instagramImage.className = "instagram_image"
+  instagramImage.setAttribute("src", "./images/instagram.png");
+  
+  ancora.appendChild(instagramImage);
+
+
+
+
+  })
+}
+
+preencherCards();
