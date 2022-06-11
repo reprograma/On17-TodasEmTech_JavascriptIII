@@ -57,3 +57,39 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+const cardsContainer = document.querySelector(".cardsContainer");
+
+const updatedCards = JSON.forEach((el) => {
+  let cards = document.createElement("div");
+  cards.classList.add("cards");
+  cardsContainer.appendChild(cards);
+
+  let image = document.createElement("img");
+  image.setAttribute("src", el.imagem);
+  cards.appendChild(image);
+
+  let title = document.createElement("h3");
+  title.innerHTML = el.titulo;
+  cards.appendChild(title);
+
+  let ano = document.createElement("p");
+  ano.innerHTML = `<b>Ano</b>: ${el.ano}`;
+  cards.appendChild(ano);
+
+  let diretor = document.createElement("p");
+  diretor.innerHTML = `<b>Diretor</b>: ${el.diretor}`;
+  cards.appendChild(diretor);
+
+  let generos = document.createElement("p");
+  generos.innerHTML = `<b>Gêneros</b>: ${el.generos.join(' - ')}`;
+  cards.appendChild(generos);
+
+  let elenco = document.createElement("p");
+  elenco.innerHTML = `<b>Elenco</b>: ${el.elenco.join(", ")}`;
+  cards.appendChild(elenco);
+
+  let instagram = document.createElement("span");
+  instagram.innerHTML = `<b>Instagram</b>: ${el.instagram}`;
+  cards.appendChild(instagram);
+}); 
