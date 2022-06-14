@@ -57,3 +57,36 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+
+const objetoJson = {
+  imagem: "./images/manhas.jpg",
+  nome: "Manhãs de Setembro",
+  ano: "2021",
+  diretor: "Luis Pinheiro",
+  generos: ["Drama"],
+  elenco: ["Liniker", "Linn da Quebrada"], 
+  instagram: "https://www.instagram.com/explore/tags/manhasdesetembroserie/"
+
+
+ 
+};
+const imagem = document.getElementById('imagem')
+const titulo = document.getElementById('title')
+const ano = document.getElementById('ano')
+const diretor = document.getElementById('diretor')
+const generos = document.getElementById('gender')
+const elenco = document.getElementById('elenco')
+const instagram = document.getElementById('instagram')
+
+const preencherDados = () => {
+  imagem.setAttribute('src', objetoJson.imagem)
+  titulo.innerText = objetoJson.nome
+  ano.innerHTML  = objetoJson.ano.join(' - ')
+  diretor.innerHTML = objetoJson.diretor.join(' - ')
+  generos.innerHTML = objetoJson.generos.join(' - ')
+  elenco.innerHTML = objetoJson.elenco.join(' - ')
+  instagram.setAttribute('href', objetoJson.instagram)
+}
+
+preencherDados() 
