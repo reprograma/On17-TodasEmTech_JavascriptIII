@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Nunito', sans-serif;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #800080;
+
+}
+h1{
+  text-align: center;
+  padding-top: 5vh;
+  color: white;
+  font-size: 55px;
+  box-sizing: border-box;
+}
+.containerCards{
+  display: flex;
+  width: 100vw;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  background-color: #d02090;
+  width: 300px;
+  height: 500px;
+  margin: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 2px 2px 2px #B37989;
+  border: solid 2px white;
+
+
+}
+p{
+    font-size: 15px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.card_image {
+  margin-top: 1rem;
+  border-radius: 50%;
+  border: solid 2px white;
+  width: 200px;
+  height: 180px;
+}
+
+.card_h2{
+  font-size: 30px;
+  color: white;
+}
+
+hr {
+  width: 250px;
+  opacity: 0.4;
+  margin: 1rem 0;
+}
+
+.instagram_image{
+  width: 45px
+} 
