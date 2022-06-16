@@ -57,3 +57,58 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+const container = document.querySelector('#container')
+
+function printCards() {
+  JSON.forEach(infoCard => {
+    
+    const eachCard = document.createElement('div')
+    eachCard.setAttribute('class', 'each-card')
+
+    const imgCard = document.createElement('img')
+    imgCard.setAttribute('class', 'img-card')
+    imgCard.setAttribute('src', infoCard.imagem)
+
+    const title = document.createElement('h3')
+    title.innerText = infoCard.titulo
+
+    const year = document.createElement('p')
+    year.setAttribute('class', 'info-style')
+    year.innerText = infoCard.ano
+
+    const director = document.createElement('p')
+    director.setAttribute('class', 'info-style')
+    director.innerText = infoCard.diretor
+
+    const genders = document.createElement('span')
+    genders.setAttribute('class', 'info-style')
+    genders.innerText = infoCard.generos
+
+    const cast = document.createElement('span')
+    cast.setAttribute('class', 'info-style')
+    cast. innerText = infoCard.elenco
+
+    const instagram = document.createElement('img')
+    instagram.setAttribute('class', 'insta-img')
+    instagram.setAttribute('src', './images/icons8-instagram-96.png')
+
+    const instaLink = document.createElement('a')
+    instaLink.setAttribute('href', infoCard.instagram)
+
+    instaLink.appendChild(instagram)
+
+
+    container.appendChild(eachCard)
+    eachCard.appendChild(imgCard)
+    eachCard.appendChild(title)
+    eachCard.appendChild(year)
+    eachCard.appendChild(director)
+    eachCard.appendChild(genders)
+    eachCard.appendChild(cast)
+    eachCard.appendChild(instaLink)
+
+  });
+}
+
+printCards();
