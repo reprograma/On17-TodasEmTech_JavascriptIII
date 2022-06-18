@@ -12,7 +12,7 @@ Importante:
 
 let JSON = [
   {
-    "imagem": "./images/pose.jpg",
+    "imagem": "./images/Pose.jpg",
     "titulo": "Pose",
     "ano": "2018",
     "diretor": "Ryan Murphy",
@@ -57,3 +57,43 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+const cardsContainer = document.querySelector(".cardsContainer");
+
+function preencherCards() {
+  JSON.forEach((elemento) => {
+    let cards = document.createElement("div");
+    cards.classList.add("cards");
+    cardsContainer.appendChild(cards);
+
+    let image = document.createElement("img");
+    image.setAttribute("src", elemento.imagem);
+    cards.appendChild(image);
+
+    let title = document.createElement("h3");
+    title.innerHTML = elemento.titulo;
+    cards.appendChild(title);
+
+    let ano = document.createElement("p");
+    ano.innerHTML = `<b>Ano</b>: ${elemento.ano}`;
+    cards.appendChild(ano);
+
+    let diretor = document.createElement("p");
+    diretor.innerHTML = `<b>Diretor</b>: ${elemento.diretor}`;
+    cards.appendChild(diretor);
+
+    let generos = document.createElement("p");
+    generos.innerHTML = `<b>Gêneros</b>: ${elemento.generos.join(" - ")}`;
+    cards.appendChild(generos);
+
+    let elenco = document.createElement("p");
+    elenco.innerHTML = `<b>Elenco</b>: ${elemento.elenco.join(", ")}`;
+    cards.appendChild(elenco);
+
+    let instagram = document.createElement("span");
+    instagram.innerHTML = `<b>Instagram</b>: ${elemento.instagram}`;
+    cards.appendChild(instagram);
+  });
+}
+
+preencherCards();
