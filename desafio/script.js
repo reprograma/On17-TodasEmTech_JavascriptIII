@@ -10,14 +10,15 @@ Importante:
 
 */
 
-let JSON = [
+
+const dados = [
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
     "ano": "2018",
     "diretor": "Ryan Murphy",
     "generos": ["Drama"],
-    "elenco": ["Dominique Jackson", "Indya Moore", "Mj Rodriguez", "Angelica Ross", "Hailie Sahar"], 
+    "elenco": ["Dominique Jackson", "Indya Moore", "Mj Rodriguez", "Angelica Ross", "Hailie Sahar"],
     "instagram": "https://www.instagram.com/poseonfx/"
   },
   {
@@ -26,7 +27,7 @@ let JSON = [
     "ano": "2021",
     "diretor": "Luis Pinheiro",
     "generos": ["Drama"],
-    "elenco": ["Liniker", "Linn da Quebrada"], 
+    "elenco": ["Liniker", "Linn da Quebrada"],
     "instagram": "https://www.instagram.com/explore/tags/manhasdesetembroserie/"
   },
   {
@@ -35,7 +36,7 @@ let JSON = [
     "ano": "2019",
     "diretor": "Sam Levinson",
     "generos": ["Drama"],
-    "elenco": ["Hunter Schafer", "Ron Leshem", "Daphna Levin"], 
+    "elenco": ["Hunter Schafer", "Ron Leshem", "Daphna Levin"],
     "instagram": "https://www.instagram.com/euphoria/"
   },
   {
@@ -44,7 +45,7 @@ let JSON = [
     "ano": "2020",
     "diretor": "Javier Ambrossi",
     "generos": ["Drama", "Biografia"],
-    "elenco": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"], 
+    "elenco": ["Daniela Santiago", "Jedet Sánchez", "Isabel Torres", "Lola Rodríguez", "Paca La Piraña"],
     "instagram": "https://www.instagram.com/venenolaserie/"
   },
   {
@@ -53,7 +54,67 @@ let JSON = [
     "ano": "2020",
     "diretor": "Rik Reinholdtsen",
     "generos": ["Reality Show", "Competição"],
-    "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
+    "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"],
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+
+
+const cardsContainer = document.getElementById("cards_container");
+
+dados.forEach((obj) => {
+  const div = document.createElement("div");
+  div.classList.add("card");
+  cardsContainer.appendChild(div);
+
+  console.log(cardsContainer.className)
+
+  const img = document.createElement("img");
+  img.setAttribute("src", obj.imagem);
+  img.classList.add("card_image");
+  div.appendChild(img);
+
+  const titulo = document.createElement("h2");
+  titulo.classList.add("card_h2");
+  titulo.innerText = `${obj.titulo}`;
+  div.appendChild(titulo);
+  const hr = document.createElement("hr");
+  div.appendChild(hr);
+
+  const ano = document.createElement("p");
+  ano.classList.add("card_descricao");
+  ano.innerText = `Ano: ${obj.ano}`;
+  div.appendChild(ano);
+
+  const diretor = document.createElement("p");
+  diretor.classList.add("card_descricao");
+  diretor.innerText = `Diretor: ${obj.diretor}`;
+  div.appendChild(diretor);
+
+  const generos = document.createElement("p");
+  generos.classList.add("card_descricao");
+  diretor.innerText = `Generos: ${obj.generos}`;
+  div.appendChild(generos);
+
+  const elenco = document.createElement("p");
+  elenco.classList.add("card_descricao");
+  elenco.innerText = `Elenco: ${obj.elenco.join("-")}`;
+  div.appendChild(elenco);
+  elenco.style.textAlign = "center";
+
+  const hrDois = document.createElement("hr");
+  div.appendChild(hrDois);
+
+  const ancora = document.createElement("a");
+  ancora.classList.add("card_ancora");
+  ancora.setAttribute("href", obj.instagram);
+  ancora.setAttribute("target", '_blank');
+  div.appendChild(ancora);
+
+  const instagramImage = document.createElement("img");
+  instagramImage.classList.add("instagram_image");
+  instagramImage.setAttribute("src", "./images/instagram.jpeg");
+
+  ancora.appendChild(instagramImage);
+}); 
