@@ -56,4 +56,42 @@ let JSON = [
     "elenco": ["Leiomy Maldonado", "Megan Thee Stallion", "Dashaun Wesley"], 
     "instagram": "https://www.instagram.com/legendarymax/"
   },
-]
+];
+
+for (const tvShow of JSON) {
+
+  let cardOriginal = document.querySelector(".tv-show");
+  let cardNew = document.createElement("section");
+  cardNew.classList.add("tv-show");
+  cardNew.innerHTML = cardOriginal.innerHTML;
+  
+  document.body.appendChild(cardNew);
+
+  let tvsImagem    = cardNew.querySelector(".imagem");
+  let tvsTitulo    = cardNew.querySelector(".titulo");
+  let tvsAno       = cardNew.querySelector(".ano");
+  let tvsDiretor   = cardNew.querySelector(".diretor");
+  let tvsGeneros   = cardNew.querySelector(".generos");
+  let tvsElenco    = cardNew.querySelector(".elenco");
+  let tvsInstagram = cardNew.querySelector(".instagram");
+
+  tvsImagem.lastElementChild.src = tvShow.imagem;
+  tvsTitulo.lastElementChild.textContent = tvShow.titulo;
+  tvsAno.lastElementChild.textContent = tvShow.ano;
+  tvsDiretor.lastElementChild.textContent = tvShow.diretor;
+  tvsInstagram.lastElementChild.href = tvShow.instagram;
+  tvsInstagram.lastElementChild.textContent = tvShow.instagram;
+  
+  // Resolvendo os arrays
+  tvsGeneros.innerHTML += "<span>";
+  tvsGeneros.innerHTML += tvShow.generos.join(", ");
+  tvsGeneros.innerHTML += "</span>";
+
+  tvsElenco.innerHTML += "<span>";
+  tvsElenco.innerHTML += tvShow.elenco.join(", ");
+  tvsElenco.innerHTML += "</span>";
+}
+
+// Removendo o card template
+let firstCard = document.querySelector(".tv-show");
+document.body.removeChild(firstCard);
