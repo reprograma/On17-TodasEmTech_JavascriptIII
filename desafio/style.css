@@ -1,0 +1,45 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imagem > img {
+    width: 100%;
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tv-show {
+    /* border: 1px solid gray; */
+    border-radius: 8px;
+    background-color: #ddd;
+    width: 300px;
+    padding-bottom: 10px;
+    overflow-x: hidden;
+}
+
+.tv-show-info {
+    padding: 10px;
+    font-size: 14px;
+    display: grid;
+    gap: 4px;
+}
+
+.titulo {
+    font-size: 16px;
+    font-weight: 600;
+}
+.ano {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.info-title {
+    color: #777;
+    font-size: 12px;
+}
+
+body {
+    display: flex;
+    gap: 12px;
+}
