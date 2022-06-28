@@ -1,0 +1,44 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-size: 10px;
+  font-family: 'Nunito', sans-serif; /* https://fonts.google.com/specimen/Nunito */
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: black; /* https://flatuicolors.com/palette/de */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 25px;
+}
+
+.card_image {
+  max-height: 650px;
+    
+}
+
+.card_h2 {
+  font-size: 50px;
+  text-align: center;
+  color: red;
+}
+
+.card_descricao{
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
