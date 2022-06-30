@@ -10,7 +10,7 @@ Importante:
 
 */
 
-let objetoJson = [
+let JSON = [
   {
     "imagem": "./images/pose.jpg",
     "titulo": "Pose",
@@ -58,26 +58,60 @@ let objetoJson = [
   },
 ]
 
-const vincularDados = () => {
-  objetoJson.forEach((elemento, index) => {
-const foto = document.getElementById(`photography-${index}`)
-const titulo = document.getElementById(`title-${index}`)
-const ano = document.getElementById(`year-${index}`)
-const generos = document.getElementById(`gender-${index}`)
-const elenco = document.getElementById(`cast-${index}`)
-const instagram = document.getElementById(`instagram-${index}`)
+const divMain = document.querySelector('.div-cards')
+function preencherCards() {
+  JSON.forEach((obj) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    divMain.appendChild(div);
 
-foto.setAttribute('src', elemento.imagem)
-titulo.innerText = elemento.titulo
-ano.innerHTML = elemento.ano
-generos.innerHTML = elemento.generos
-elenco.innerText = elemento.elenco.join(' - ')
-instagram.setAttribute('href', elemento.instagram)
+    const img = document.createElement("img");
+    img.setAttribute("src", obj.imagem);
+    img.className = "card_image";
+    div.appendChild(img);
+
+    const titulo = document.createElement("h2");
+    titulo.className = "card_h2";
+    titulo.innerText = `${obj.titulo}`;
+    div.appendChild(titulo);
+    const hr = document.createElement("hr");
+    div.appendChild(hr);
+
+    const ano = document.createElement("p");
+    ano.className = "card_descricao";
+    ano.innerText = `Ano: ${obj.ano}`;
+    div.appendChild(ano);
+
+    const diretor = document.createElement("p");
+    diretor.className = "card_descricao";
+    diretor.innerText = `Diretor: ${obj.diretor}`;
+    div.appendChild(diretor);
+
+    const generos = document.createElement("p");
+    generos.className = "card_descricao";
+    generos.innerText = `Gêneros: ${obj.generos}`;
+    div.appendChild(generos);
+
+    const elenco = document.createElement("p");
+    elenco.className = "card_descricao";
+    elenco.innerText = `Elenco: ${obj.elenco[0]}`;
+    div.appendChild(elenco);
+    elenco.style.textAlign = "center";
+
+    const hrDois = document.createElement("hr");
+    div.appendChild(hrDois);
+
+    const ancora = document.createElement("a");
+    ancora.className = "card_ancora";
+    ancora.setAttribute("href", obj.instagram);
+    div.appendChild(ancora);
+
+    const instagramImage = document.createElement("img");
+    instagramImage.className = "instagram_image";
+    instagramImage.setAttribute("src", "./images/instagram.png");
+
+    ancora.appendChild(instagramImage);
   });
 }
 
-vincularDados()
-
-
-
-
+preencherCards();
