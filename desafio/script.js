@@ -1,6 +1,8 @@
 /* 
 
-O exercício consiste em usar JavaScript para popular os campos corretamente com os dados do arquivo data.json (ou do objeto JSON) um site de informações sobre séries protagonizadas por mulheres trans e travestis, neste caso a página exibe 5 séries, em 5 cards diferentes em uma só página;
+O exercício consiste em usar JavaScript para popular os campos corretamente com os dados do arquivo data.json
+(ou do objeto JSON) um site de informações sobre séries protagonizadas por mulheres trans e travestis, 
+neste caso a página exibe 5 séries, em 5 cards diferentes em uma só página;
 
 Importante:
 
@@ -57,3 +59,92 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+// 1ª etapa criando os cards => retornando(criando) o hTML no JS
+// modelo template string = várias expressões em uma linha embutida
+// interpolação => ${}
+
+// linha  => criando const e selecionando a classe do HTML
+// linha  => criando uma função
+// linha  => usando metodo para percorrer o array(Json)
+// obj = cada pedaço que será percorrido no array)
+// guardando dado na variável div
+// adicionando uma classe para a div
+// pedindo para a divMain do HTML armazenar(adotar) a div que criei
+
+
+const divMain = document.querySelector('.div-cards')
+function preencherCards() {
+  JSON.forEach((obj) => {
+    const div = document.createElement("div");
+    div.className = "card";
+    divMain.appendChild(div);
+
+    const img = document.createElement("img");
+    img.setAttribute("src", obj.imagem);
+    img.className = "card_image";
+    div.appendChild(img);
+
+    const titulo = document.createElement("h2");
+    titulo.className = "card_h2";
+    titulo.innerText = `${obj.titulo}`;
+    div.appendChild(titulo);
+    const hr = document.createElement("hr");
+    div.appendChild(hr);
+
+    const ano = document.createElement("p");
+    ano.className = "card_descricao";
+    ano.innerText = `Ano: ${obj.ano}`;
+    div.appendChild(ano);
+
+    const diretor = document.createElement("p");
+    diretor.className = "card_descricao";
+    diretor.innerText = `Diretor: ${obj.diretor}`;
+    div.appendChild(diretor);
+
+    const generos = document.createElement("p");
+    generos.className = "card_descricao";
+    diretor.innerText = `Generos: ${obj.generos}`;
+    div.appendChild(generos);
+
+    const elenco = document.createElement("p");
+    elenco.className = "card_descricao";
+    elenco.innerText = `Elenco: ${obj.elenco.join("-")}`;
+    div.appendChild(elenco);
+    elenco.style.textAlign = "center";
+
+    const hrDois = document.createElement("hr");
+    div.appendChild(hrDois);
+
+    const ancora = document.createElement("a");
+    ancora.className = "card_ancora";
+    ancora.setAttribute("href", obj.instagram);
+    div.appendChild(ancora);
+
+    const instagramImage = document.createElement("img");
+    instagramImage.className = "instagram_image";
+    instagramImage.setAttribute("src", "./images/instagram.png");
+
+    ancora.appendChild(instagramImage);
+  });
+}
+
+preencherCards();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
