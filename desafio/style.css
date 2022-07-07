@@ -3,7 +3,7 @@
 
 /* HEADER */
 .header {
-    min-height: 80vh;
+    min-height: 80 vh;
     width: 100%;
     /*geralmente corrige distorção*/
     background-size: cover;
