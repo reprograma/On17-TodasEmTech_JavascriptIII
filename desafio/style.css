@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ body {
+   min-height: 100vh;
+   width: 100%;
+
+ }
+
+ h1{
+   text-align: center;
+   padding-top: 5vh;
+   color: rgb(4, 11, 2);
+   font-size: 40px;
+   box-sizing: border-box;
+ }
+
+ .cards_container{
+   display: flex;
+   width: 100vw;
+   height: 85vh;
+   justify-content: center;
+   align-items: center;
+
+ }
+ .card{
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(159, 209, 152);
+   width: 350px;
+   height: 550px;
+   margin: 10px;
+   border-radius: 10px;
+   align-items: center;
+   justify-content: space-evenly;
+
+ }
+
+ .card_image {
+   margin-top: 1rem;
+   border-radius: 50%;
+   border: solid 2px #0e1d0150;
+   width: 200px;
+   height: 180px;
+ }
+
+ .card_h2{
+   font-size: 14x;
+   color: rgb(72, 166, 13);
+ }
+
+ hr {
+   width: 250px;
+   opacity: 0.2;
+   margin: 1rem 0;
+ }
+
+ .instagram_image{
+   width: 45px
+ }
