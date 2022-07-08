@@ -1,13 +1,11 @@
 /* 
-
-O exercício consiste em usar JavaScript para popular os campos corretamente com os dados do arquivo data.json (ou do objeto JSON) um site de informações sobre séries protagonizadas por mulheres trans e travestis, neste caso a página exibe 5 séries, em 5 cards diferentes em uma só página;
-
+O exercício consiste em usar JavaScript para popular os campos corretamente com os dados do arquivo data.json
+(ou do objeto JSON) um site de informações sobre séries protagonizadas por mulheres trans e travestis, 
+neste caso a página exibe 5 séries, em 5 cards diferentes em uma só página;
 Importante:
-
 1. Crie seu próprio layout usando HTML e CSS nos arquivos já criados nesta pasta;
 2. Repare que este Json é uma matriz, logo é possível usar métodos de array para acessar seu conteúdo;
 3. Entregue este exercício da maneira que conseguir, use o exemplo da sala para guiar nesta construção;
-
 */
 
 let JSON = [
@@ -57,3 +55,58 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+//
+
+
+const container = document.querySelector('.container')
+function conteudoContainer() {
+  JSON.forEach((obj) => {
+    const div = document.createElement("div");
+    div.className = "imagem";
+    container.appendChild(div);
+
+    const titulo = document.createElement("h2");
+    titulo.className = "nomeSerie";
+    titulo.innerText = `${obj.titulo}`;
+    div.appendChild(titulo);
+
+    const img = document.createElement("img");
+    img.setAttribute("src", obj.imagem);
+    img.className = "cadaImagem";
+    div.appendChild(img);
+    
+    const diretor= document.createElement("p");
+    diretor.className = "infos";
+    diretor.innerText = `Direção: ${obj.diretor}`;
+    div.appendChild(diretor);
+    
+    const genero = document.createElement("p");
+    genero.className = "infos";
+    diretor.innerText = `Generos: ${obj.generos}`;
+    div.appendChild(genero);
+    
+    const elenco = document.createElement("p");
+    elenco.className = "infos";
+    elenco.innerText = `Elenco: ${obj.elenco.join(" - ")}`;
+    div.appendChild(elenco);
+    
+    const ano = document.createElement("p");
+    ano.className = "infos";
+    ano.innerText = `Ano de lançamento: ${obj.ano}`;
+    div.appendChild(ano);
+        
+  });
+}
+
+conteudoContainer();
+
+
+
+
+
+
+
+
+
+
