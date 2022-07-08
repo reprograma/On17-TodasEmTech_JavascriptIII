@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 10px;
+  }
+  
+  body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(66, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .imagem {
+    margin: 2.5rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nomeSerie {
+  font-size: 5rem;
+  padding: 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.cadaImagem {
+  max-height: 80rem;
+  border-radius: 5rem;    
+  padding: 3rem; 
+}
+ 
+  .infos{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(163, 163, 163);
+  }
