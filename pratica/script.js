@@ -16,10 +16,12 @@ const instagram = document.getElementById('instagram')
 
 const preencherDados = () => {
   foto.setAttribute('src', objetoJson.foto)
-  titulo.innerText = objetoJson.nome
-  generos.innerHTML = objetoJson.generos.join(' - ')
+  titulo.innerText = objetoJson.nome // inner text altera o texto do elemento
+  generos.innerHTML = objetoJson.generos.join(' - ') // altera o html do elemeto
   discografia.innerText = objetoJson.discografia.join(' - ')
   instagram.setAttribute('href', objetoJson.instagram)
 }
 
 preencherDados()
+
+
