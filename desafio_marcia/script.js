@@ -57,3 +57,68 @@ let JSON = [
     "instagram": "https://www.instagram.com/legendarymax/"
   },
 ]
+
+
+
+const cardContainer = document.querySelector(".cards_container");
+
+/* CRIAR UMA FUNÇÃO PARA PREENCHER OS CARDS */
+
+function preencherCards() {
+JSON.forEach((obj) => {
+  const div = document.createElement("div"); // Criando o elemento no html
+  div.className = "card"; // Criando um nome para o elemenro no html
+  cardContainer.appendChild(div); // Adotando esse elemento (Container adota a div)
+
+  //repetir os comandos para todos os items
+
+  const img = document.createElement("img");
+  img.setAttribute("src", obj.imagem); // Preenchendo os elementos com a informção dada pela lista do array (tbm repetir esse processo para as demais informações)
+  img.className = "card_image";
+  div.appendChild(img);
+
+  const titulo = document.createElement("h2");
+  titulo.className = "card_h2";
+  titulo.innerText = `${obj.titulo}`;
+  div.appendChild(titulo);
+
+  const hr = document.createElement("hr");
+  div.appendChild(hr);
+
+  const ano = document.createElement("p");
+  ano.className = "ano"
+  ano.innerText = `${obj.ano}`;
+  div.appendChild(ano);
+
+  const diretor = document.createElement("p");
+  diretor.className = "diretor";
+  diretor.innerText = `${obj.diretor}`;
+  div.appendChild(diretor);
+
+  const generos = document.createElement("p");
+  generos.className = "generos";
+  generos.innerText = `${obj.generos}`;
+  div.appendChild(generos);
+
+  const elenco = document.createElement("p");
+  elenco.className = "elenco";
+  elenco.innerText = `${obj.elenco}`;
+  div.appendChild(generos);
+
+  const hrDois = document.createElement("hr");
+  div.appendChild(hrDois);
+
+  const ancora = document.createElement("a");
+  ancora.className = "card_ancora";
+  ancora.setAttribute("href", obj.instagram);
+  div.appendChild(ancora);
+
+  const instagramImage = document.createElement("img");
+  instagramImage.className = "instagram_image";
+  instagramImage.setAttribute("src", "./images/instagram.png");
+
+  ancora.appendChild(instagramImage);
+});
+}
+
+preencherCards(); 
