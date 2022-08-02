@@ -48,8 +48,8 @@ p {
     display: flex;
     flex-direction: column;
     background-color: rgb(107, 107, 107);
-    width: 350px;
-    height: 450px;
+    width: 340px;
+    height: 520px;
     margin: 10px;
     border-radius: 10px;
     align-items: center;
